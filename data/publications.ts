@@ -61,6 +61,7 @@ export const publications: Publication[] = [
     title: "A Comparative Study on Deep Learning Architectures for Classification of Photothrombotic Damaged Regions in Histopathological Rabbit Brain",
     venue: "Biomedical Signal Processing and Control", details: "Vol. 111, 108354, January 2026", indexes: ["SCIE", "Scopus"],
     url: "https://doi.org/10.1016/j.bspc.2025.108354",
+    correspondingAuthors: ["Taegeun Oh"],
   },
   {
     id: "oh-ta-rrt", year: 2025, type: "journal", status: "Published",
@@ -97,6 +98,7 @@ export const publications: Publication[] = [
     title: "A Fault Management Design of Dual-Redundant Flight Control Computer for Unmanned Aerial Vehicle",
     venue: "Journal of the Korean Society for Aeronautical and Space Sciences", details: "Vol. 50, No. 5, pp. 349–357, May 2022", indexes: ["Scopus", "KCI"],
     url: "https://doi.org/10.5139/JKSAS.2022.50.5.349",
+    correspondingAuthors: ["Hyung-sik Yoon"],
   },
   {
     id: "chang-autonomous-mission", year: 2021, type: "journal", status: "Published",
@@ -104,6 +106,7 @@ export const publications: Publication[] = [
     title: "Autonomous Mission Management Software Design and Verification Technique for Unmanned Aerial Vehicles",
     venue: "Journal of the Korean Society for Aeronautical and Space Sciences", details: "Vol. 49, No. 6, pp. 505–513, June 2021", indexes: ["Scopus", "KCI"],
     url: "https://doi.org/10.5139/JKSAS.2021.49.6.505",
+    correspondingAuthors: ["Taegeun Oh"],
   },
   {
     id: "kim-autonomous-awareness", year: 2021, type: "domestic", status: "Published",
@@ -111,6 +114,7 @@ export const publications: Publication[] = [
     title: "Development of an Autonomous Situational Awareness Software for Autonomous Unmanned Aerial Vehicles",
     venue: "Journal of Aerospace System Engineering", details: "Vol. 15, No. 2, pp. 36–44, April 2021", indexes: ["KCI"],
     url: "https://doi.org/10.20910/JASE.2021.15.2.36",
+    correspondingAuthors: ["Taegeun Oh"],
   },
   {
     id: "han-pilot-mental-state", year: 2020, type: "journal", status: "Published",
