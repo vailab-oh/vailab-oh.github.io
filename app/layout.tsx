@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Research in autonomous systems, intelligent path planning, computer vision, and medical image intelligence led by Taegeun Oh at Dong Seoul University.",
   verification: {
-    google: "avBA2pFh3_LUaiQSiH_CndwWtwop77bxMjukt_g554s",
+    <meta name="google-site-verification" content="avBA2pFh3_LUaiQSiH_CndwWtwop77bxMjukt_g554s" />
   },
   openGraph: {
     title: "Vision & Autonomous Intelligence Lab",
