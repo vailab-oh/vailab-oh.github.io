@@ -4,7 +4,7 @@ import { Fragment, useMemo, useState } from "react";
 import { publicationTypeLabels, publishedPublications, type PublicationIndex, type PublicationType } from "@/data/publications";
 
 type TypeFilter = "all" | PublicationType;
-type IndexFilter = "all" | PublicationIndex;
+type IndexFilter = "all" | "indexed" | "unindexed" | PublicationIndex;
 
 const typeFilters: { value: TypeFilter; label: string }[] = [
   { value: "all", label: "All work" },
@@ -14,17 +14,23 @@ const typeFilters: { value: TypeFilter; label: string }[] = [
   { value: "book", label: "Books" },
 ];
 const indexFilters: { value: IndexFilter; label: string }[] = [
-  { value: "all", label: "All indexes" },
+  { value: "all", label: "All publications" },
+  { value: "indexed", label: "Indexed" },
   { value: "SCIE", label: "SCIE" },
   { value: "Scopus", label: "Scopus" },
   { value: "KCI", label: "KCI" },
+  { value: "unindexed", label: "Unindexed" },
 ];
 const indexCounts = Object.fromEntries(
   indexFilters.map(({ value }) => [
     value,
     value === "all"
       ? publishedPublications.length
-      : publishedPublications.filter((item) => item.indexes?.includes(value)).length,
+      : value === "indexed"
+        ? publishedPublications.filter((item) => item.indexes?.length).length
+        : value === "unindexed"
+          ? publishedPublications.filter((item) => !item.indexes?.length).length
+          : publishedPublications.filter((item) => item.indexes?.includes(value)).length,
   ]),
 ) as Record<IndexFilter, number>;
 
@@ -58,7 +64,13 @@ export function PublicationExplorer() {
     const normalized = query.trim().toLowerCase();
     return publishedPublications.filter((item) => {
       const matchesType = typeFilter === "all" || item.type === typeFilter;
-      const matchesIndex = indexFilter === "all" || item.indexes?.includes(indexFilter);
+      const matchesIndex = indexFilter === "all"
+        ? true
+        : indexFilter === "indexed"
+          ? Boolean(item.indexes?.length)
+          : indexFilter === "unindexed"
+            ? !item.indexes?.length
+            : Boolean(item.indexes?.includes(indexFilter));
       const haystack = `${item.title} ${item.authors} ${item.venue} ${item.year} ${item.indexes?.join(" ") ?? ""}`.toLowerCase();
       return matchesType && matchesIndex && (!normalized || haystack.includes(normalized));
     });
