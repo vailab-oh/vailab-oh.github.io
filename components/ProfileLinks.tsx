@@ -1,6 +1,6 @@
 const profiles = [
-  { label: "LinkedIn", icon: "in", href: "https://www.linkedin.com/in/taegeun-oh-802b01134" },
-  { label: "Google Scholar", icon: "GS", href: "https://scholar.google.com/citations?user=Cu0fIlUAAAAJ" },
+  { label: "LinkedIn", icon: "in", href: "https://www.linkedin.com/in/taegeun-oh-802b01134/" },
+  { label: "Google Scholar", icon: "GS", href: "https://scholar.google.com/citations?user=Cu0fIlUAAAAJ&hl=ko" },
 ] as const;
 
 export function ProfileLinks({ compact = false }: { compact?: boolean }) {
