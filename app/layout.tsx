@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   ],
   verification: {
     google: "avBA2pFh3_LUaiQSiH_CndwWtwop77bxMjukt_g554s",
+    other: {
+      "naver-site-verification": "843183e80db11ded1b90f1bdaf9fe1366a472735",
+    },
   },
   openGraph: {
     title: "Vision & Autonomous Intelligence Lab | 오태근 교수 연구실",
