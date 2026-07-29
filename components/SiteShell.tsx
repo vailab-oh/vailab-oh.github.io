@@ -30,9 +30,9 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-grid">
-        <div><p className="eyebrow">Vision & Autonomous Intelligence Lab</p><h2>From visual evidence to reliable intelligent action.</h2></div>
+        <div><p className="eyebrow">Vision & Autonomous Intelligence Lab · 오태근 교수 연구실</p><h2>From visual evidence to reliable intelligent action.</h2></div>
         <div className="footer-contact">
-          <span>Dong Seoul University</span><span>Seongnam, Gyeonggi-do, Korea</span><a href="mailto:tgoh@du.ac.kr">tgoh@du.ac.kr</a>
+          <span>Dong Seoul University · 동서울대학교</span><span>Seongnam, Gyeonggi-do, Korea</span><a href="mailto:tgoh@du.ac.kr">tgoh@du.ac.kr</a>
         </div>
       </div>
       <div className="footer-bottom"><span>© {new Date().getFullYear()} VAI Lab</span><span>Autonomy · Planning · Perception · Medical Image AI</span></div>

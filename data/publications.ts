@@ -22,6 +22,7 @@ export type Publication = {
   indexes?: PublicationIndex[];
   details?: string;
   url?: string;
+  correspondingAuthors?: string[];
 };
 
 export const publications: Publication[] = [
@@ -52,6 +53,7 @@ export const publications: Publication[] = [
     title: "A Comparative Analysis of Deep Learning Models for Disease Classification in Multi-organ Histopathological Images",
     venue: "Scientific Reports", details: "June 2026", indexes: ["SCIE", "Scopus"],
     url: "https://doi.org/10.1038/s41598-026-56045-z",
+    correspondingAuthors: ["Taegeun Oh"],
   },
   {
     id: "choi-rabbit-brain", year: 2026, type: "journal", status: "Published",
@@ -66,6 +68,7 @@ export const publications: Publication[] = [
     title: "TA-RRT*: Adaptive Sampling Based Path Planning using Terrain Analysis",
     venue: "Applied Sciences", details: "Vol. 15, No. 5, February 2025", indexes: ["SCIE", "Scopus"],
     url: "https://doi.org/10.3390/app15052287",
+    correspondingAuthors: ["Sungjin Lee"],
   },
   {
     id: "jung-delivery-robot", year: 2024, type: "conference", status: "Published",
@@ -80,6 +83,7 @@ export const publications: Publication[] = [
     title: "Multi-Time Window Feature Extraction Technique for Anger Detection in Gait Data",
     venue: "Journal of the Korea Society of Computer and Information", details: "Vol. 28, No. 4, pp. 41–51, April 2023", indexes: ["KCI"],
     url: "https://doi.org/10.9708/jksci.2023.28.04.041",
+    correspondingAuthors: ["Taegeun Oh"],
   },
   {
     id: "oh-mobility-path-planning-book", year: 2023, type: "book", status: "Published",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { RecruitmentCallout } from "@/components/RecruitmentCallout";
 import { PageFrame } from "@/components/SiteShell";
 import {
   latestPublishedScieJournals,
@@ -15,6 +16,7 @@ export default function Home() {
           <p className="eyebrow"><span className="pulse-dot" /> Dong Seoul University · Seongnam</p>
           <h1>Intelligence<br />in <em>motion.</em></h1>
           <p className="hero-lead">We develop vision and autonomy for systems that must understand complex scenes, choose reliable paths, and act safely in the real world.</p>
+          <p className="hero-identity">Led by Taegeun Oh (오태근), Dong Seoul University (동서울대학교).</p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/research">Explore our research <span>↗</span></Link>
             <Link className="text-link" href="/publications">View publications <span>→</span></Link>
@@ -50,6 +52,8 @@ export default function Home() {
         <div className="section-heading row-heading"><div><p className="eyebrow">Published · SCIE journals</p><h2>Latest published work</h2></div><Link className="text-link" href="/publications">All publications <span>→</span></Link></div>
         <div className="featured-publications">{latestPublishedScieJournals.map((item) => <article key={item.id}><div className="featured-meta"><span>{item.year}</span><span>SCIE journal</span></div><h3>{item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.title}</a> : item.title}</h3><p>{item.venue}</p></article>)}</div>
       </section>
+
+      <RecruitmentCallout showProfiles />
     </PageFrame>
   );
 }

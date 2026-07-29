@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import { publicationTypeLabels, publishedPublications, type PublicationType } from "@/data/publications";
 
 type Filter = "all" | PublicationType;
@@ -11,6 +11,28 @@ const filters: { value: Filter; label: string }[] = [
   { value: "domestic", label: "Domestic journals" },
   { value: "book", label: "Books" },
 ];
+
+const highlightedAuthors = new Set(["Taegeun Oh", "Sungjun Jang", "Minkwon Jeon"]);
+
+function renderAuthors(authors: string, correspondingAuthors: string[] = []) {
+  const recognizedAuthors = Array.from(new Set([...highlightedAuthors, ...correspondingAuthors]))
+    .sort((a, b) => b.length - a.length);
+  const pattern = new RegExp(`(${recognizedAuthors.map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "g");
+  const corresponding = new Set(correspondingAuthors);
+
+  return authors.split(pattern).map((part, index) => {
+    if (!recognizedAuthors.includes(part)) return <Fragment key={`${part}-${index}`}>{part}</Fragment>;
+    const content = (
+      <>
+        {part}
+        {corresponding.has(part) && <sup className="corresponding-mark" title="Corresponding author" aria-label="corresponding author">*</sup>}
+      </>
+    );
+    return highlightedAuthors.has(part)
+      ? <strong className="highlighted-author" key={`${part}-${index}`}>{content}</strong>
+      : <span key={`${part}-${index}`}>{content}</span>;
+  });
+}
 
 export function PublicationExplorer() {
   const [filter, setFilter] = useState<Filter>("all");
@@ -37,7 +59,7 @@ export function PublicationExplorer() {
           <span aria-hidden="true">⌕</span>
         </label>
       </div>
-      <p className="result-count" aria-live="polite">{visible.length} results</p>
+      <div className="publication-summary"><p className="result-count" aria-live="polite">{visible.length} results</p><p className="author-legend"><strong>Bold</strong> VAI Lab author <span>*</span> Corresponding author</p></div>
       <div className="publication-list">
         {visible.map((item) => {
           const href = item.status === "Published" ? item.url : undefined;
@@ -47,7 +69,7 @@ export function PublicationExplorer() {
               <div className="publication-year">{item.year}</div>
               <div className="publication-copy">
                 <div className="publication-meta"><span>{publicationTypeLabels[item.type]}</span><span className={`status status-${item.status.toLowerCase().replace(" ", "-")}`}>{item.status}</span>{showPublicationDetails && item.indexes?.map((index) => <span className={`index-badge index-${index.toLowerCase()}`} key={index}>{index}</span>)}</div>
-                <h2>{item.title}</h2><p className="authors">{item.authors}</p>{showPublicationDetails && <p className="venue">{item.venue}{item.details ? ` · ${item.details}` : ""}</p>}
+                <h2>{item.title}</h2><p className="authors">{renderAuthors(item.authors, item.correspondingAuthors)}</p>{showPublicationDetails && <p className="venue">{item.venue}{item.details ? ` · ${item.details}` : ""}</p>}
               </div>
               {href && <a className="publication-link" href={href} target="_blank" rel="noreferrer" aria-label={`Open the official publication page for ${item.title}`}>↗</a>}
             </article>
