@@ -1,6 +1,4 @@
-import { ProfileLinks } from "@/components/ProfileLinks";
-
-export function RecruitmentCallout({ showProfiles = false }: { showProfiles?: boolean }) {
+export function RecruitmentCallout() {
   return (
     <section className="section-shell recruitment-callout" aria-labelledby="recruitment-title">
       <div className="recruitment-copy">
@@ -17,12 +15,6 @@ export function RecruitmentCallout({ showProfiles = false }: { showProfiles?: bo
         </a>
         <span>tgoh@du.ac.kr</span>
       </div>
-      {showProfiles && (
-        <div className="recruitment-profiles">
-          <span>Professor profiles</span>
-          <ProfileLinks compact />
-        </div>
-      )}
     </section>
   );
 }

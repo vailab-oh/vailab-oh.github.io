@@ -25,10 +25,10 @@ export default function PeoplePage() {
       <div className="section-heading split-heading"><div><p className="eyebrow">Current lab members</p><h2>Undergraduate<br />Researchers</h2></div><p>Our undergraduate researchers work on perception and planning problems for dependable autonomous UAV systems.</p></div>
       <div className="member-grid">{undergraduateResearchers.map((member, index) => <article className="member-card" key={member.name}><div className="member-card-top"><span>{String(index + 1).padStart(2, "0")}</span><span className="member-monogram" aria-hidden="true">{member.initials}</span></div><div><p>Undergraduate Researcher</p><h3>{member.name}</h3><dl><dt>Research focus</dt><dd>{member.topic}</dd></dl></div></article>)}</div>
     </section>
+    <RecruitmentCallout />
     <section className="section-shell alumni-section">
       <div className="section-heading split-heading"><div><p className="eyebrow">Former lab members</p><h2>Alumni</h2></div><p>Former researchers continuing their academic and professional journeys.</p></div>
       <article className="alumni-card"><span className="member-monogram" aria-hidden="true">SJ</span><div><p>Alumnus</p><h3>Sungjun Jang</h3></div><dl><div><dt>Research focus</dt><dd>UAV Vision Perception</dd></div><div><dt>Current position</dt><dd>M.S. Student, Kyung Hee University</dd></div></dl></article>
     </section>
-    <RecruitmentCallout />
   </PageFrame>;
 }
