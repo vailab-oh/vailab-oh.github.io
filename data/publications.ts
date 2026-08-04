@@ -5,6 +5,7 @@
  * homepage highlights all update automatically. The homepage selects the four
  * most recent published SCIE journal articles. Add `url` only for an official
  * DOI or publisher page; entries without one are shown without an external link.
+ * Add `dbUrl` when a publication has an accompanying database or dataset.
  */
 
 export type PublicationType = "journal" | "conference" | "domestic" | "book";
@@ -22,6 +23,7 @@ export type Publication = {
   indexes?: PublicationIndex[];
   details?: string;
   url?: string;
+  dbUrl?: string;
   correspondingAuthors?: string[];
 };
 
@@ -61,6 +63,7 @@ export const publications: Publication[] = [
     title: "A Comparative Study on Deep Learning Architectures for Classification of Photothrombotic Damaged Regions in Histopathological Rabbit Brain",
     venue: "Biomedical Signal Processing and Control", details: "Vol. 111, 108354, January 2026", indexes: ["SCIE", "Scopus"],
     url: "https://doi.org/10.1016/j.bspc.2025.108354",
+    dbUrl: "https://doi.org/10.5281/zenodo.21787811",
     correspondingAuthors: ["Taegeun Oh"],
   },
   {
