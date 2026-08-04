@@ -226,6 +226,8 @@ button, input { font: inherit; }
 .publication-copy p { margin: 5px 0; font-size: 13px; }
 .publication-copy .authors { color: #35504d; }
 .publication-copy .venue { color: var(--muted); font-style: italic; }
+.publication-db-link { color: var(--accent-dark); font-style: normal; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+.publication-db-link:hover { color: var(--ink-strong); }
 .publication-link { align-self: center; display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--line-strong); border-radius: 50%; }
 .publication-link:hover { background: var(--mint); border-color: var(--mint); }
 .empty-state { padding: 60px; display: flex; flex-direction: column; align-items: center; gap: 8px; border: 1px dashed var(--line-strong); border-radius: 14px; background: var(--surface); }

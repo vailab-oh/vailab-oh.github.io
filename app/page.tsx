@@ -52,7 +52,7 @@ export default function Home() {
 
       <section className="section-shell content-section publication-preview">
         <div className="section-heading row-heading"><div><p className="eyebrow">Published · SCIE journals</p><h2>Latest published work</h2></div><Link className="text-link" href="/publications">All publications <span>→</span></Link></div>
-        <div className="featured-publications">{latestPublishedScieJournals.map((item) => <article key={item.id}><div className="featured-meta"><span>{item.year}</span><span>SCIE journal</span></div><h3>{item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.title}</a> : item.title}</h3><p>{item.venue}</p></article>)}</div>
+        <div className="featured-publications">{latestPublishedScieJournals.map((item) => <article key={item.id}><div className="featured-meta"><span>{item.year}</span><span>SCIE journal</span></div><h3>{item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.title}</a> : item.title}</h3><p>{item.venue}{item.dbUrl && <> · <a className="publication-db-link" href={item.dbUrl} target="_blank" rel="noreferrer" aria-label={`Open the database for ${item.title}`}>DB</a></>}</p></article>)}</div>
       </section>
 
       <RecruitmentCallout />

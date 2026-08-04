@@ -48,6 +48,7 @@ test("keeps homepage metrics and recent work limited to published research", asy
   assert.doesNotMatch(html, /Core research programs/);
   assert.match(html, /Latest published work/);
   assert.match(html, /Biocybernetics and Biomedical Engineering/);
+  assert.match(html, /href="https:\/\/doi\.org\/10\.5281\/zenodo\.21787811"/);
   assert.doesNotMatch(html, /Journal of Aerospace Information Systems/);
   assert.doesNotMatch(html, /2024 IEEE International Conference on Consumer Electronics/);
 });
@@ -86,6 +87,7 @@ test("starts Publications with the list and renders index badges", async () => {
   assert.match(html, /index-scopus/);
   assert.match(html, /index-kci/);
   assert.match(html, /https:\/\/doi\.org\/10\.3390\/app15052287/);
+  assert.match(html, /href="https:\/\/doi\.org\/10\.5281\/zenodo\.21787811"/);
   assert.doesNotMatch(html, /scholar\.google\.com/);
   assert.doesNotMatch(html, /Journal of Aerospace Information Systems/);
   assert.doesNotMatch(html, /Signal, Image and Video Processing/);
