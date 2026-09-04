@@ -5,7 +5,8 @@
  * homepage highlights all update automatically. The homepage selects the four
  * most recent published SCIE journal articles. Add `url` only for an official
  * DOI or publisher page; entries without one are shown without an external link.
- * Add `dbUrl` when a publication has an accompanying database or dataset.
+ * Add `dbUrl` when a publication has an accompanying database or dataset, and
+ * `codeUrl` when its implementation is publicly available.
  */
 
 export type PublicationType = "journal" | "conference" | "domestic" | "book";
@@ -24,6 +25,7 @@ export type Publication = {
   details?: string;
   url?: string;
   dbUrl?: string;
+  codeUrl?: string;
   correspondingAuthors?: string[];
 };
 
@@ -72,6 +74,7 @@ export const publications: Publication[] = [
     title: "TA-RRT*: Adaptive Sampling Based Path Planning using Terrain Analysis",
     venue: "Applied Sciences", details: "Vol. 15, No. 5, February 2025", indexes: ["SCIE", "Scopus"],
     url: "https://doi.org/10.3390/app15052287",
+    codeUrl: "https://github.com/vailab-oh/vailab-repo/tree/main/UxV/Path-Planning/TA-RRT",
     correspondingAuthors: ["Sungjin Lee"],
   },
   {

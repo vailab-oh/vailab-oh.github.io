@@ -104,7 +104,7 @@ export function PublicationExplorer() {
               <div className="publication-year">{item.year}</div>
               <div className="publication-copy">
                 <div className="publication-meta"><span>{publicationTypeLabels[item.type]}</span><span className={`status status-${item.status.toLowerCase().replace(" ", "-")}`}>{item.status}</span>{showPublicationDetails && item.indexes?.map((index) => <span className={`index-badge index-${index.toLowerCase()}`} key={index}>{index}</span>)}</div>
-                <h2>{item.title}</h2><p className="authors">{renderAuthors(item.authors, item.correspondingAuthors)}</p>{showPublicationDetails && <p className="venue">{item.venue}{item.details ? ` · ${item.details}` : ""}{item.dbUrl && <> · <a className="publication-db-link" href={item.dbUrl} target="_blank" rel="noreferrer" aria-label={`Open the database for ${item.title}`}>DB</a></>}</p>}
+                <h2>{item.title}</h2><p className="authors">{renderAuthors(item.authors, item.correspondingAuthors)}</p>{showPublicationDetails && <p className="venue">{item.venue}{item.details ? ` · ${item.details}` : ""}{item.dbUrl && <> · <a className="publication-resource-link" href={item.dbUrl} target="_blank" rel="noreferrer" aria-label={`Open the database for ${item.title}`}>DB</a></>}{item.codeUrl && <> · <a className="publication-resource-link" href={item.codeUrl} target="_blank" rel="noreferrer" aria-label={`Open the source code for ${item.title}`}>Code</a></>}</p>}
               </div>
               {href && <a className="publication-link" href={href} target="_blank" rel="noreferrer" aria-label={`Open the official publication page for ${item.title}`}>↗</a>}
             </article>
