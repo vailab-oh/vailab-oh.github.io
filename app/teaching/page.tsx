@@ -5,6 +5,7 @@ import { teachingAreas } from "@/data/teaching";
 export const metadata: Metadata = {
   title: "Teaching",
   description: "Courses taught by Taegeun Oh at Dong Seoul University.",
+  alternates: { canonical: "/teaching/" },
 };
 
 export default function TeachingPage() {

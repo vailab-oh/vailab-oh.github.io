@@ -3,7 +3,11 @@ import Image from "next/image";
 import { PageFrame } from "@/components/SiteShell";
 import { researchAreas } from "@/data/research";
 
-export const metadata: Metadata = { title: "Research", description: "Research themes and programs of the Vision & Autonomous Intelligence Lab." };
+export const metadata: Metadata = {
+  title: "Research",
+  description: "Research themes and programs of the Vision & Autonomous Intelligence Lab.",
+  alternates: { canonical: "/research/" },
+};
 
 export default function ResearchPage() {
   return <PageFrame>

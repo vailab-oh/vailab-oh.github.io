@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ProfileLinks } from "@/components/ProfileLinks";
@@ -8,6 +9,10 @@ import {
   publishedPublicationCounts,
 } from "@/data/publications";
 import { researchAreas } from "@/data/research";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (

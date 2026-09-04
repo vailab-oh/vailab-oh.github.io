@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://taegeun-oh.github.io/"),
+  metadataBase: new URL("https://vailab-oh.github.io/"),
   title: {
     default: "Vision & Autonomous Intelligence Lab | 오태근 교수 연구실",
     template: "%s · VAI Lab | 오태근 교수 연구실",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Vision & Autonomous Intelligence Lab at Dong Seoul University, led by Taegeun Oh (오태근). 동서울대학교 오태근 교수 연구실은 자율시스템, 경로계획, 컴퓨터비전, 의료영상 AI를 연구합니다.",
   applicationName: "VAI Lab",
-  authors: [{ name: "Taegeun Oh (오태근)", url: "https://taegeun-oh.github.io/people/" }],
+  authors: [{ name: "Taegeun Oh (오태근)", url: "https://vailab-oh.github.io/people/" }],
   creator: "Taegeun Oh (오태근)",
   publisher: "Vision & Autonomous Intelligence Lab, Dong Seoul University",
   keywords: [

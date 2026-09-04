@@ -6,6 +6,7 @@ import { PageFrame } from "@/components/SiteShell";
 export const metadata: Metadata = {
   title: "People · 오태근 교수",
   description: "Taegeun Oh (오태근), Dong Seoul University faculty profile and members of the Vision & Autonomous Intelligence Lab.",
+  alternates: { canonical: "/people/" },
 };
 
 export default function PeoplePage() {

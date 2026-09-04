@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://taegeun-oh.github.io/sitemap.xml",
+    sitemap: "https://vailab-oh.github.io/sitemap.xml",
   };
 }
