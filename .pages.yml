@@ -33,6 +33,45 @@ content:
       - { name: paper_url, label: Paper URL, type: string, required: false }
       - { name: code_url, label: Code URL, type: string, required: false }
       - { name: external_url, label: External URL, type: string, required: false }
+  - name: projects
+    label: Projects
+    type: collection
+    path: _projects
+    format: yaml-frontmatter
+    filename: "{fields.start_year}-{primary}.md"
+    view:
+      primary: title
+      fields: [title, group, start_year, order, period, involvement]
+      sort: [start_year, title]
+      search: [title, research_area, supporting_organization]
+      default:
+        sort: start_year
+        order: desc
+    fields:
+      - { name: title, label: Project title, type: string, required: true }
+      - name: group
+        label: Project group
+        type: select
+        required: true
+        options:
+          values:
+            - { label: Academic Research Projects, value: academic }
+            - { label: Selected R&D Projects at ADD, value: add }
+      - { name: start_year, label: Start year, type: number, required: true }
+      - { name: order, label: Display order within the same start year, type: number, required: false }
+      - { name: period, label: Period, type: string, required: false }
+      - { name: project_period, label: Project period, type: string, required: false }
+      - { name: involvement, label: User involvement, type: string, required: false }
+      - { name: supporting_organization, label: Supporting organization, type: string, required: false }
+      - { name: program, label: Program, type: string, required: false }
+      - { name: program_authority, label: Program authority, type: string, required: false }
+      - { name: project_management, label: Project management, type: string, required: false }
+      - { name: collaboration, label: International collaboration, type: string, required: false }
+      - { name: performing_organizations, label: Performing organizations, type: string, required: false }
+      - { name: research_area, label: Research area, type: text, required: true }
+      - { name: role, label: Role, type: string, required: false }
+      - { name: related_publication_id, label: Related publication ID, type: string, required: false }
+      - { name: body, label: Description, type: rich-text }
 settings:
   content:
     merge: true

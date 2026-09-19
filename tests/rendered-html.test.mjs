@@ -30,9 +30,24 @@ test("renders the current site navigation without a Code page", async () => {
   const html = await response.text();
   assert.match(html, /Vision &amp; Autonomous Intelligence Lab/);
   assert.match(html, /href="\/research"/);
+  assert.match(html, /href="\/projects"/);
   assert.match(html, /href="\/publications"/);
   assert.doesNotMatch(html, /href="\/code"/);
   assert.doesNotMatch(html, /Browse research code/);
+});
+
+test("renders public-facing academic and ADD project information", async () => {
+  const response = await render("/projects");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Academic research projects/);
+  assert.match(html, /Selected R&amp;D projects at ADD/);
+  assert.match(html, /Principal Investigator/);
+  assert.match(html, /Project period/);
+  assert.match(html, /User involvement/);
+  assert.match(html, /U\.S\. Air Force Research Laboratory/);
+  assert.match(html, /Future Challenge Defense Technology R&amp;D Program/);
+  assert.doesNotMatch(html, /Participating Researcher/);
 });
 
 test("uses date-ordered publication data for the three homepage highlights", async () => {
