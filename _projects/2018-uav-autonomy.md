@@ -1,5 +1,5 @@
 ---
-title: "UAV Autonomy and Mission Management Technology Development"
+title: "UAV Autonomy and Mission Management"
 group: add
 start_year: 2018
 order: 3
@@ -9,4 +9,4 @@ research_area: "UAV autonomy · Mission management · Autonomous situational awa
 related_publication_ids: "chang-autonomous-mission, kim-autonomous-awareness"
 ---
 
-Research and development of autonomous mission-management and situational-awareness technologies for unmanned aerial vehicles.
+Research and development of autonomous mission-management, situational-awareness, and decision-support technologies for unmanned aerial systems.

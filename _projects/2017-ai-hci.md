@@ -1,5 +1,5 @@
 ---
-title: "HCI Technology Research for Pilot State Recognition"
+title: "Pilot State Recognition using Multimodal Biosignals"
 group: add
 start_year: 2017
 order: 4
@@ -9,4 +9,4 @@ research_area: "Human–computer interaction · Multimodal biosignals · Deep le
 related_publication_ids: "han-pilot-mental-state"
 ---
 
-Research on deep-learning-based pilot state recognition using multimodal biosignals and development of an HCI software prototype.
+Research on pilot state recognition using multimodal physiological signals and deep-learning methods for human–computer interaction.
