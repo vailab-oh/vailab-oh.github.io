@@ -6,7 +6,7 @@ order: 3
 period: "February 2018 – August 2020"
 supporting_organization: "Defense Acquisition Program Administration (DAPA), Republic of Korea"
 research_area: "UAV autonomy · Mission management · Autonomous situational awareness"
-related_publication_id: "chang-autonomous-mission"
+related_publication_ids: "chang-autonomous-mission, kim-autonomous-awareness"
 ---
 
 Research and development of autonomous mission-management and situational-awareness technologies for unmanned aerial vehicles.

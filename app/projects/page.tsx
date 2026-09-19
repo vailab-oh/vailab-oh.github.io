@@ -6,7 +6,7 @@ import { publications } from "@/data/publications";
 export const metadata: Metadata = { title: "Projects", description: "Selected academic and research and development projects from VAI Lab.", alternates: { canonical: "/projects/" } };
 
 function ProjectCard({ item }: { item: Project }) {
-  const publication = item.related_publication_id ? publications.find((entry) => entry.id === item.related_publication_id) : undefined;
+  const relatedPublications = (item.related_publication_ids ?? []).flatMap((id) => publications.filter((entry) => entry.id === id && entry.url));
   return <article className="project-card">
     {item.role && <div className="project-card-top"><span className="project-role">{item.role}</span></div>}
     <h2>{item.title}</h2>
@@ -18,7 +18,7 @@ function ProjectCard({ item }: { item: Project }) {
     </dl>
     <p className="project-area">{item.research_area}</p>
     <div className="project-content">{item.content.split(/\n\s*\n/).filter(Boolean).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
-    {publication?.url && <a className="project-publication-link" href={publication.url} target="_blank" rel="noreferrer">Related publication: {publication.title} <span aria-hidden="true">↗</span></a>}
+    {relatedPublications.length > 0 && <div className="project-publications">{relatedPublications.map((publication) => <a className="project-publication-link" href={publication.url!} target="_blank" rel="noreferrer" key={publication.id}>Related publication: {publication.title} <span aria-hidden="true">↗</span></a>)}</div>}
   </article>;
 }
 

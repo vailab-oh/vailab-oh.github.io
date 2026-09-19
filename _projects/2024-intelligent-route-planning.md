@@ -7,6 +7,7 @@ period: "May 2024 – February 2025"
 supporting_organization: "Dong Seoul University"
 role: "Principal Investigator"
 research_area: "AI-based route planning · Demand-responsive transportation · Mobility optimization"
+related_publication_ids: "oh-ta-rrt"
 ---
 
 Research on intelligent route-planning methods for demand-responsive transportation using algorithmic and AI-based approaches.

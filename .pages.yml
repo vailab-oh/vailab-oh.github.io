@@ -65,7 +65,7 @@ content:
       - { name: collaboration, label: International collaboration, type: string, required: false }
       - { name: research_area, label: Research area, type: text, required: true }
       - { name: role, label: Role, type: string, required: false }
-      - { name: related_publication_id, label: Related publication ID, type: string, required: false }
+      - { name: related_publication_ids, label: Related publication IDs, type: string, required: false, description: "Comma-separated publication IDs from data/publications.ts" }
       - { name: body, label: Description, type: rich-text }
 settings:
   content:

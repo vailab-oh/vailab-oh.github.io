@@ -46,6 +46,9 @@ test("renders public-facing academic and ADD project information", async () => {
   assert.match(html, /Period/);
   assert.match(html, /U\.S\. Air Force Research Laboratory/);
   assert.match(html, /Future Challenge Defense Technology R&amp;D Program/);
+  assert.match(html, /TA-RRT\*: Adaptive Sampling Based Path Planning using Terrain Analysis/);
+  assert.match(html, /Development of an Autonomous Situational Awareness Software for Autonomous Unmanned Aerial Vehicles/);
+  assert.match(html, /A Fault Management Design of Dual-Redundant Flight Control Computer for Unmanned Aerial Vehicle/);
   assert.doesNotMatch(html, /Participating Researcher/);
   assert.doesNotMatch(html, /Project period/);
   assert.doesNotMatch(html, /User involvement/);
