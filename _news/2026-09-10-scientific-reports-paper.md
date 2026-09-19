@@ -1,6 +1,5 @@
 ---
-title: Deep Learning Study on Multi-Organ Histopathology Published in Scientific
-  Reports
+title: Multi-Organ Histopathology Study Published in Scientific Reports
 date: 2026-06-04
 category: Publication
 summary: Our collaborative study on deep learning-based multi-organ
