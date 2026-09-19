@@ -9,6 +9,7 @@ import {
   publishedPublicationCounts,
 } from "@/data/publications";
 import { researchAreas } from "@/data/research";
+import { featuredNews } from "@/data/news";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -44,6 +45,15 @@ export default function Home() {
         <div><strong>{publishedPublicationCounts.journals}</strong><span>International journal papers</span></div>
         <div><strong>{publishedPublicationCounts.conferences}</strong><span>International conference papers</span></div>
       </div></section>
+
+      <section className="section-shell content-section news-preview">
+        <div className="section-heading row-heading"><div><p className="eyebrow">Latest news</p><h2>From the lab</h2></div><Link className="text-link" href="/news">All news <span>→</span></Link></div>
+        <div className="news-preview-grid">{featuredNews.slice(0, 3).map((item) => <article className="news-preview-card" key={item.slug}>
+          <div className="news-meta"><time dateTime={item.date}>{item.displayDate}</time><span>{item.category}</span></div>
+          <h3><Link href={item.url}>{item.title}</Link></h3><p>{item.summary}</p>
+          <Link className="news-read-link" href={item.url}>Read more <span aria-hidden="true">→</span></Link>
+        </article>)}</div>
+      </section>
 
       <section className="section-shell content-section">
         <div className="section-heading split-heading"><div><p className="eyebrow">Research areas</p><h2>Four directions.<br />One research agenda.</h2></div><p>We connect reliable autonomy, constrained planning, multi-task perception, and medical image intelligence within one coherent research program.</p></div>

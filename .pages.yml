@@ -1,0 +1,38 @@
+media:
+  input: public/uploads
+  output: /uploads
+content:
+  - name: news
+    label: News
+    type: collection
+    path: _news
+    format: yaml-frontmatter
+    filename:
+      template: "{fields.date}-{primary}.md"
+      field: false
+    view:
+      primary: title
+      fields: [title, date, category, featured]
+      sort: [date, title]
+      search: [title, summary, category]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options: { format: yyyy-MM-dd }
+      - { name: category, label: Category, type: string, required: true }
+      - { name: summary, label: Summary, type: text, required: true }
+      - { name: featured, label: Featured on homepage, type: boolean, default: false }
+      - { name: thumbnail, label: Thumbnail / featured image, type: image, required: false }
+      - { name: body, label: Content, type: rich-text }
+      - { name: paper_url, label: Paper URL, type: string, required: false }
+      - { name: code_url, label: Code URL, type: string, required: false }
+      - { name: external_url, label: External URL, type: string, required: false }
+settings:
+  content:
+    merge: true

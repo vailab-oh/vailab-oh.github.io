@@ -3,8 +3,9 @@ import Link from "next/link";
 const navItems = [
   ["Research", "/research"],
   ["People", "/people"],
-  ["Teaching", "/teaching"],
+  ["News", "/news"],
   ["Publications", "/publications"],
+  ["Teaching", "/teaching"],
 ] as const;
 
 export function SiteHeader() {
@@ -19,7 +20,7 @@ export function SiteHeader() {
           {navItems.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
         </nav>
         <a className="header-cta" href="https://github.com/taegeun-oh/Vision-AI" target="_blank" rel="noreferrer">
-          Research code <span aria-hidden="true">↗</span>
+          Code &amp; Data <span aria-hidden="true">↗</span>
         </a>
       </div>
     </header>
