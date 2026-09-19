@@ -35,7 +35,7 @@ test("renders the current site navigation without a Code page", async () => {
   assert.doesNotMatch(html, /Browse research code/);
 });
 
-test("keeps homepage metrics and recent work limited to published research", async () => {
+test("uses date-ordered publication data for the three homepage highlights", async () => {
   const response = await render();
   assert.equal(response.status, 200);
 
@@ -47,9 +47,11 @@ test("keeps homepage metrics and recent work limited to published research", asy
   assert.doesNotMatch(html, /Registered patents/);
   assert.doesNotMatch(html, /Core research programs/);
   assert.match(html, /Latest published work/);
-  assert.match(html, /Biocybernetics and Biomedical Engineering/);
-  assert.match(html, /href="https:\/\/doi\.org\/10\.5281\/zenodo\.21787811"/);
+  assert.match(html, /Scientific Reports/);
+  assert.match(html, /Jong-ryul Choi, Minkwon Jeon, Si Won Choi, and Taegeun Oh/);
+  assert.match(html, /href="https:\/\/doi\.org\/10\.1038\/s41598-026-56045-z"/);
   assert.match(html, /href="https:\/\/github\.com\/vailab-oh\/vailab-repo\/tree\/main\/UxV\/Path-Planning\/TA-RRT"/);
+  assert.doesNotMatch(html, /Biocybernetics and Biomedical Engineering/);
   assert.doesNotMatch(html, /Journal of Aerospace Information Systems/);
   assert.doesNotMatch(html, /2024 IEEE International Conference on Consumer Electronics/);
 });

@@ -5,7 +5,7 @@ import { ProfileLinks } from "@/components/ProfileLinks";
 import { RecruitmentCallout } from "@/components/RecruitmentCallout";
 import { PageFrame } from "@/components/SiteShell";
 import {
-  latestPublishedScieJournals,
+  latestPublications,
   publishedPublicationCounts,
 } from "@/data/publications";
 import { researchAreas } from "@/data/research";
@@ -66,8 +66,8 @@ export default function Home() {
       </section>
 
       <section className="section-shell content-section publication-preview">
-        <div className="section-heading row-heading"><div><p className="eyebrow">Published · SCIE journals</p><h2>Latest published work</h2></div><Link className="text-link" href="/publications">All publications <span>→</span></Link></div>
-        <div className="featured-publications">{latestPublishedScieJournals.map((item) => <article key={item.id}><div className="featured-meta"><span>{item.year}</span><span>SCIE journal</span></div><h3>{item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.title}</a> : item.title}</h3><p>{item.venue}{item.dbUrl && <> · <a className="publication-resource-link" href={item.dbUrl} target="_blank" rel="noreferrer" aria-label={`Open the database for ${item.title}`}>DB</a></>}{item.codeUrl && <> · <a className="publication-resource-link" href={item.codeUrl} target="_blank" rel="noreferrer" aria-label={`Open the source code for ${item.title}`}>Code</a></>}</p></article>)}</div>
+        <div className="section-heading row-heading"><div><p className="eyebrow">Publications</p><h2>Latest published work</h2></div><Link className="text-link" href="/publications">All publications <span>→</span></Link></div>
+        <div className="featured-publications">{latestPublications.map((item) => <article key={item.id}><div className="featured-meta"><span>{item.year}</span><span>{item.venue}</span></div><h3>{item.url ? <a href={item.url} target="_blank" rel="noreferrer">{item.title}</a> : item.title}</h3><p className="featured-authors">{item.authors}</p><p className="featured-links">{item.url && <a className="publication-resource-link" href={item.url} target="_blank" rel="noreferrer">Paper</a>}{item.codeUrl && <><span>·</span><a className="publication-resource-link" href={item.codeUrl} target="_blank" rel="noreferrer">Code</a></>}</p></article>)}</div>
       </section>
 
       <RecruitmentCallout />
