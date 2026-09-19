@@ -1,5 +1,5 @@
 ---
-title: "UAV Autonomy and Mission Management Technology"
+title: "UAV Autonomy and Mission Management Technology Development"
 group: add
 start_year: 2018
 order: 3

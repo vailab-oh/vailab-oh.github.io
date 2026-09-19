@@ -1,13 +1,12 @@
 ---
-title: "Autonomous Mission Software for Unmanned Wingman Systems"
+title: "Mission Autonomy Software Development for Unmanned Formation Aircraft"
 group: add
 start_year: 2021
 order: 2
-involvement: "2021–2022"
+period: "2021–2022"
+supporting_organization: "Defense Acquisition Program Administration (DAPA), Republic of Korea"
 program: "Future Challenge Defense Technology R&D Program"
-program_authority: "Defense Acquisition Program Administration (DAPA), Republic of Korea"
-project_management: "Agency for Defense Development (ADD)"
-research_area: "UAV autonomy · Autonomous mission software · Cooperative mission planning"
+research_area: "Multi-UAV autonomy · Mission management · Cooperative path planning"
 ---
 
-Development and research of autonomous mission software for unmanned wingman systems, including cooperative mission management and path-planning capabilities.
+Research and development of mission-autonomy software for cooperative unmanned aircraft operations.

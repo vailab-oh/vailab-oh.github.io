@@ -41,13 +41,17 @@ test("renders public-facing academic and ADD project information", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Academic research projects/);
-  assert.match(html, /Selected R&amp;D projects at ADD/);
+  assert.match(html, /Defense R&amp;D/);
   assert.match(html, /Principal Investigator/);
-  assert.match(html, /Project period/);
-  assert.match(html, /User involvement/);
+  assert.match(html, /Period/);
   assert.match(html, /U\.S\. Air Force Research Laboratory/);
   assert.match(html, /Future Challenge Defense Technology R&amp;D Program/);
   assert.doesNotMatch(html, /Participating Researcher/);
+  assert.doesNotMatch(html, /Project period/);
+  assert.doesNotMatch(html, /User involvement/);
+  assert.doesNotMatch(html, /Performing organizations/);
+  assert.doesNotMatch(html, /Program authority/);
+  assert.doesNotMatch(html, /Project management/);
 });
 
 test("uses date-ordered publication data for the three homepage highlights", async () => {

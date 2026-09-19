@@ -1,12 +1,12 @@
 ---
-title: "AI-Based Human–Computer Interaction Research"
+title: "HCI Technology Research for Pilot State Recognition"
 group: add
 start_year: 2017
 order: 4
 period: "November 2017 – December 2019"
 supporting_organization: "Defense Acquisition Program Administration (DAPA), Republic of Korea"
-research_area: "Deep learning · Multimodal biosignals · Human–computer interaction"
+research_area: "Human–computer interaction · Multimodal biosignals · Deep learning"
 related_publication_id: "han-pilot-mental-state"
 ---
 
-Research on deep-learning-based recognition of human cognitive and physiological states using multimodal biosignals.
+Research on deep-learning-based pilot state recognition using multimodal biosignals and development of an HCI software prototype.

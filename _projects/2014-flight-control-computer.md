@@ -1,5 +1,5 @@
 ---
-title: "Flight-Control Computer Software for a UAV System"
+title: "Flight-Control Computer Software Development for MUAV"
 group: add
 start_year: 2014
 order: 5
@@ -8,4 +8,4 @@ supporting_organization: "Defense Acquisition Program Administration (DAPA), Rep
 research_area: "Flight-control computer · Embedded software · System integration and verification"
 ---
 
-Development, verification, and system-level integration of flight-control computer software for a UAV system.
+Development and verification of flight-control computer software for MUAV, including system-level integration activities.
