@@ -249,9 +249,17 @@ export const publications: Publication[] = [
   },
 ];
 
+const publicationStatusOrder: Record<PublicationStatus, number> = {
+  Accepted: 2,
+  "Minor revision": 1,
+  "Major revision": 0,
+  Published: 3,
+  Submitted: 4,
+};
+
 export const listedPublications = publications
   .filter((publication) => publication.status !== "Submitted")
-  .sort((a, b) => b.date.localeCompare(a.date));
+  .sort((a, b) => publicationStatusOrder[a.status] - publicationStatusOrder[b.status] || b.date.localeCompare(a.date));
 
 export const publishedPublications = publications
   .filter((publication) => publication.status === "Published")
