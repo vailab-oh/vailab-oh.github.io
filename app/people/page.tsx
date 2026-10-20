@@ -13,7 +13,7 @@ export default function PeoplePage() {
   const undergraduateResearchers = [
     { name: "Minkwon Jeon", initials: "MJ", topic: "UAV Situation Perception" },
     { name: "Geunhyung Lee", initials: "GL", topic: "UAV Collision Avoidance" },
-    { name: "Daein Lee", initials: "DL", topic: "Research focus to be confirmed" },
+    { name: "Jiseong Yang", initials: "JY", topic: "Research focus to be confirmed" },
   ];
 
   return <PageFrame>

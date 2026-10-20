@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, useMemo, useState } from "react";
-import { publicationTypeLabels, publishedPublications, type PublicationIndex, type PublicationType } from "@/data/publications";
+import { publicationTypeLabels, listedPublications as publishedPublications, type PublicationIndex, type PublicationType } from "@/data/publications";
 
 type TypeFilter = "all" | PublicationType;
 type IndexFilter = "all" | PublicationIndex;
@@ -98,7 +98,7 @@ export function PublicationExplorer() {
       <div className="publication-list">
         {visible.map((item) => {
           const href = item.status === "Published" ? item.url : undefined;
-          const showPublicationDetails = item.status === "Published";
+          const showPublicationDetails = true;
           return (
             <article className={`publication-item${href ? "" : " publication-item-no-link"}`} key={item.id}>
               <div className="publication-year">{item.year}</div>

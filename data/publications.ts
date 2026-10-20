@@ -11,7 +11,7 @@
  */
 
 export type PublicationType = "journal" | "conference" | "domestic" | "book";
-export type PublicationStatus = "Published" | "Submitted" | "Major revision";
+export type PublicationStatus = "Published" | "Submitted" | "Major revision" | "Minor revision" | "Accepted";
 export type PublicationIndex = "SCIE" | "Scopus" | "KCI";
 
 export type Publication = {
@@ -34,21 +34,24 @@ export type Publication = {
 
 export const publications: Publication[] = [
   {
-    id: "oh-time-window-uav", date: "2026-01-01", year: 2026, type: "journal", status: "Submitted",
+    id: "oh-time-window-uav", date: "2026-01-01", year: 2026, type: "journal", status: "Accepted",
+    correspondingAuthors: ["Taegeun Oh"],
     authors: "Taegeun Oh",
     title: "Time-Window-Aware Sampling-Based Path Planning for Time-Constrained Unmanned Aerial Vehicle Missions",
     venue: "Journal of Aerospace Information Systems",
     indexes: ["SCIE", "Scopus"],
   },
   {
-    id: "jang-xgate-net", date: "2026-01-01", year: 2026, type: "journal", status: "Submitted",
+    id: "jang-xgate-net", date: "2026-01-01", year: 2026, type: "journal", status: "Major revision",
+    correspondingAuthors: ["Taegeun Oh"],
     authors: "Sungjun Jang, Minkyoung Kim, Dongjin Jeon, and Taegeun Oh",
     title: "XGate-Net: Gated Cross-Task Interaction for Efficient Multi-Task Perception in Autonomous Driving",
     venue: "Signal, Image and Video Processing",
     indexes: ["SCIE", "Scopus"],
   },
   {
-    id: "jang-triv-net", date: "2026-01-01", year: 2026, type: "journal", status: "Major revision",
+    id: "jang-triv-net", date: "2026-01-01", year: 2026, type: "journal", status: "Minor revision",
+    correspondingAuthors: ["Taegeun Oh"],
     authors: "Sungjun Jang and Taegeun Oh",
     title: "TriV-Net: Multi-Task Learning Network for Triple Visual Perception using UAV Imagery",
     venue: "Image and Vision Computing",
@@ -245,6 +248,10 @@ export const publications: Publication[] = [
     url: "https://doi.org/10.1109/VETECS.2008.587",
   },
 ];
+
+export const listedPublications = publications
+  .filter((publication) => publication.status !== "Submitted")
+  .sort((a, b) => b.date.localeCompare(a.date));
 
 export const publishedPublications = publications
   .filter((publication) => publication.status === "Published")

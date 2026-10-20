@@ -116,9 +116,12 @@ test("starts Publications with the list and renders index badges", async () => {
   assert.match(html, /href="https:\/\/doi\.org\/10\.5281\/zenodo\.21787811"/);
   assert.match(html, /href="https:\/\/github\.com\/vailab-oh\/vailab-repo\/tree\/main\/UxV\/Path-Planning\/TA-RRT"/);
   assert.doesNotMatch(html, /scholar\.google\.com/);
-  assert.doesNotMatch(html, /Journal of Aerospace Information Systems/);
-  assert.doesNotMatch(html, /Signal, Image and Video Processing/);
-  assert.doesNotMatch(html, /Image and Vision Computing/);
+  assert.match(html, /Journal of Aerospace Information Systems/);
+  assert.match(html, /Signal, Image and Video Processing/);
+  assert.match(html, /Image and Vision Computing/);
+  assert.match(html, /Accepted/);
+  assert.match(html, /Major revision/);
+  assert.match(html, /Minor revision/);
   assert.doesNotMatch(html, /Ideas, tested/);
 });
 
