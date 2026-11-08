@@ -30,6 +30,8 @@ export default function PeoplePage() {
     <section className="section-shell alumni-section">
       <div className="section-heading split-heading"><div><p className="eyebrow">Former lab members</p><h2>Alumni</h2></div><p>Former researchers continuing their academic and professional journeys.</p></div>
       <article className="alumni-card"><span className="member-monogram" aria-hidden="true">SJ</span><div><p>Alumnus</p><h3>Sungjun Jang</h3></div><dl><div><dt>Research focus</dt><dd>UAV Vision Perception</dd></div><div><dt>Current position</dt><dd>M.S. Student, Kyung Hee University</dd></div></dl></article>
+      <article className="alumni-card"><span className="member-monogram" aria-hidden="true">MK</span><div><p>Former Undergraduate Researcher</p><h3>Minkyoung Kim</h3></div><dl><div><dt>Current position</dt><dd>High-Tech Program, Korea Polytechnics (in progress)</dd></div></dl></article>
+      <article className="alumni-card"><span className="member-monogram" aria-hidden="true">DJ</span><div><p>Former Undergraduate Researcher</p><h3>Dongjin Jeon</h3></div><dl><div><dt>Current position</dt><dd>우림테크</dd></div></dl></article>
     </section>
   </PageFrame>;
 }

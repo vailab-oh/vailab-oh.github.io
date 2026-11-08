@@ -236,7 +236,9 @@ button, input { font: inherit; }
 .member-card dd, .alumni-card dd { margin: 0; font-size: 14px; font-weight: 700; line-height: 1.45; }
 .alumni-section { padding-block: 10px 110px; }
 .alumni-card { padding: 28px; display: grid; grid-template-columns: 82px .8fr 1.2fr; gap: 30px; align-items: center; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.alumni-card + .alumni-card { margin-top: 16px; }
 .alumni-card h3 { margin-bottom: 0; }
+.alumni-card dl > div:only-child { grid-column: 1 / -1; }
 .alumni-card dl { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .alumni-card dl div { padding-left: 18px; border-left: 1px solid var(--line); }
 
