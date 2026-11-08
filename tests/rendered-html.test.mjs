@@ -120,7 +120,7 @@ test("starts Publications with the list and renders index badges", async () => {
   assert.match(html, /Signal, Image and Video Processing/);
   assert.match(html, /Image and Vision Computing/);
   assert.match(html, /Accepted/);
-  assert.match(html, /Major revision/);
+  assert.doesNotMatch(html, /Major revision/);
   assert.match(html, /Minor revision/);
   assert.doesNotMatch(html, /Ideas, tested/);
 });

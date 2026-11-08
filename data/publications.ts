@@ -39,14 +39,16 @@ export const publications: Publication[] = [
     authors: "Taegeun Oh",
     title: "Time-Window-Aware Sampling-Based Path Planning for Time-Constrained Unmanned Aerial Vehicle Missions",
     venue: "Journal of Aerospace Information Systems",
+    codeUrl: "https://github.com/vailab-oh/vailab-repo/tree/main/UxV/Path-Planning/TWA-RRT",
     indexes: ["SCIE", "Scopus"],
   },
   {
-    id: "jang-xgate-net", date: "2026-01-01", year: 2026, type: "journal", status: "Major revision",
+    id: "jang-xgate-net", date: "2026-01-01", year: 2026, type: "journal", status: "Accepted",
     correspondingAuthors: ["Taegeun Oh"],
     authors: "Sungjun Jang, Minkyoung Kim, Dongjin Jeon, and Taegeun Oh",
     title: "XGate-Net: Gated Cross-Task Interaction for Efficient Multi-Task Perception in Autonomous Driving",
     venue: "Signal, Image and Video Processing",
+    codeUrl: "https://github.com/vailab-oh/vailab-repo/tree/main/UxV/Vision-AI/XGate-Net",
     indexes: ["SCIE", "Scopus"],
   },
   {
