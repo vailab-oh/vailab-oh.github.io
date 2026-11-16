@@ -34,11 +34,12 @@ export type Publication = {
 
 export const publications: Publication[] = [
   {
-    id: "oh-time-window-uav", date: "2026-01-01", year: 2026, type: "journal", status: "Accepted",
+    id: "oh-time-window-uav", date: "2026-01-01", year: 2026, type: "journal", status: "Published",
     correspondingAuthors: ["Taegeun Oh"],
     authors: "Taegeun Oh",
     title: "Time-Window-Aware Sampling-Based Path Planning for Time-Constrained Unmanned Aerial Vehicle Missions",
     venue: "Journal of Aerospace Information Systems",
+    url: "https://arc.aiaa.org/doi/10.2514/1.I011985",
     codeUrl: "https://github.com/vailab-oh/vailab-repo/tree/main/UxV/Path-Planning/TWA-RRT",
     indexes: ["SCIE", "Scopus"],
   },
