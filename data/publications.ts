@@ -39,7 +39,7 @@ export const publications: Publication[] = [
     authors: "Taegeun Oh",
     title: "Time-Window-Aware Sampling-Based Path Planning for Time-Constrained Unmanned Aerial Vehicle Missions",
     venue: "Journal of Aerospace Information Systems",
-    details: "Article in Advance, pp. 1–9, November 2026",
+    details: "pp. 1–9, November 2026",
     url: "https://arc.aiaa.org/doi/10.2514/1.I011985",
     codeUrl: "https://github.com/vailab-oh/vailab-repo/tree/main/UxV/Path-Planning/TWA-RRT",
     indexes: ["SCIE", "Scopus"],
