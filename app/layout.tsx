@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
+
+const analyticsMeasurementId = "G-XS7DS8FRKE";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vailab-oh.github.io/"),
@@ -49,7 +52,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${analyticsMeasurementId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { window.dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', '${analyticsMeasurementId}');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
